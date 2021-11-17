@@ -1,22 +1,50 @@
 <template>
   <div
     class="card mb-2 border-success entry-card pointer"
-    @click="$router.push({ name: 'entry', params: { id: 1 } })"
+    @click="$router.push({ name: 'entry', params: { id: entry.id } })"
   >
     <div class="card-body">
-      <h5 class="card-title text-success">Hola</h5>
-      <p class="card-subtitle mb-2 text-muted">{{ new Date() }}</p>
+      <h5 class="card-title text-success">{{ month }} {{ day }}</h5>
+      <p class="card-subtitle mb-2 text-muted">{{ yearDay }}</p>
       <div class="card-text">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque
-        dolor sed doloribus sequi expedita! Vel veritatis deleniti quaerat eum
-        doloribus.
+        {{ truncatedText }}
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio','Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+const days   = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+
+export default {
+  props: {
+    entry: {
+      type: Object,
+      required: true,
+    },
+  },
+  computed: {
+    truncatedText() {
+      return this.entry.text.lenght > 150
+        ? `${this.entry.text.substring(0, 150)}...`
+        : this.entry.text;
+    },
+    day() {
+      const date = new Date(this.entry.date);
+      return date.getDay();
+    },
+
+    month() {
+      const date = new Date(this.entry.date);
+      return months[date.getMonth()];
+    },
+    yearDay() {
+      const date = new Date(this.entry.date);
+      return `${date.getFullYear()}, ${days[date.getDay()]}`
+    }
+  },
+};
 </script>
 
 <style lang="scss" scoped>

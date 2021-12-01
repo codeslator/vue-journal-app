@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entry View Should to show the entry correctly and match with last snapshot 1`] = `
+<div class="card entry-card">
+  <div class="row g-0">
+    <div class="col-4"><img src="https://res.cloudinary.com/codeslator/image/upload/v1637182405/journal-app/qzqn1sci7pby0yvcft2s.jpg" alt="" class="img-fluid rounded-start">
+      <!--v-if--><input type="file" name="picture" id="picture" accept="image/png, image/jpg" style="display: none;">
+    </div>
+    <div class="col-8">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <div class="entry-title">
+          <h5 class="card-title text-success mr-2">Noviembre 3</h5>
+          <p class="card-subtitle text-muted">2021, Miércoles</p>
+        </div>
+        <div class="entry-actions"><button class="btn btn-info"> Upload Picture <i class="fa fa-upload"></i></button><button class="btn btn-danger"> Delete <i class="fa fa-trash-alt"></i></button></div>
+      </div>
+      <div class="card-body">
+        <div class="row mt-2">
+          <div class="col"><textarea class="form-control" placeholder="What happened today?" name="" id=""></textarea></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<fab-stub icon="fa-save"></fab-stub>
+`;

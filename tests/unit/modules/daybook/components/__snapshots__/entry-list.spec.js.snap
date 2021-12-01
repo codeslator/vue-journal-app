@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entry List Component Should match with last snapshot 1`] = `
+<div class="container-fluid entry-list">
+  <div class="row">
+    <div class="col"><input type="text" class="form-control" placeholder="Search entry"></div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-12"><button class="btn btn-secondary btn-full"><i class="fa fa-plus-circle"></i> New Entry </button></div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-12">
+      <div class="entry-list-scrollable">
+        <entry-item-stub entry="[object Object]"></entry-item-stub>
+        <entry-item-stub entry="[object Object]"></entry-item-stub>
+      </div>
+    </div>
+  </div>
+</div>
+`;

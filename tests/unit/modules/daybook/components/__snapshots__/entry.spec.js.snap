@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entry Component Should match with last snapshot 1`] = `
+<div class="card mb-2 border-success entry-card pointer">
+  <div class="card-body">
+    <h5 class="card-title text-success">Noviembre 3</h5>
+    <p class="card-subtitle mb-2 text-muted">2021, Miércoles</p>
+    <div class="card-text">Hola mundo</div>
+  </div>
+</div>
+`;

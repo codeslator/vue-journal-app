@@ -83,6 +83,7 @@ import getDayMonthYear from "../helpers/getDayMonthYear";
 import uploadImage from "../helpers/uploadImage";
 
 export default {
+  name: 'EntryView',
   components: {
     Fab: defineAsyncComponent(() =>
       import(
@@ -137,7 +138,7 @@ export default {
       this.entry = entry;
     },
     async storeEntry() {
-      new Swal({
+      Swal.fire({
         title: "Please wait...",
         allowOutsideClick: false,
       });
@@ -170,7 +171,7 @@ export default {
         confirmButtonText: "I'm sure",
       });
       if (isConfirmed) {
-        new Swal({
+        Swal.fire({
           title: "Please wait...",
           allowOutsideClick: false,
         });
